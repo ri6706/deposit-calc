@@ -1,13 +1,8 @@
-#include<stdio.h>
-
-int main()
+#include <stdio.h>
+#include "fun.h"
+void solution(int sum, int data)
 {
-	int sum,date;
-
-    printf("Enter sum and date:");
-    scanf("%d %d", &sum, &date);
-	
-	 if (date<=365 && sum>=10000 && sum<=100000){
+if (date<=365 && sum>=10000 && sum<=100000){
         if (date>0 && date<=30){
         sum = sum - sum * 0.10;
         }
@@ -20,11 +15,11 @@ int main()
         if (date>240 && date<=365){
         sum = sum+sum*0.12;
         }
-	}
+    }
     else{
          printf("Error");
          }
-         
+
       if (date<=365 && sum>=100000){
         if (date>0 && date<=30){
         sum = sum-sum*0.10;
@@ -42,7 +37,5 @@ int main()
     else{
          printf("Error");
          }
-         printf("Sum: %d\n", sum);
-
-    return 0;
+    printf("Sum: %d\n", sum);
 }
